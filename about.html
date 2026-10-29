@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Haven | About Us</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="site-brand">
+        <a href="index.html"
+          ><span class="logo">BOOK<br />HAVEN</span></a
+        >
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About Us</a>
+        <a href="events.html">Community Events</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>About Us</h1>
+
+        <section>
+          <div
+            class="image-placeholder"
+            role="img"
+            aria-label="Bookstore image"
+          >
+            X
+          </div>
+        </section>
+
+        <p>Welcome to Book Haven, a local bookstore for book enthusiasts.</p>
+      </section>
+
+      <section>
+        <h2>Business Description</h2>
+        <p>
+          Book Haven offers books, magazines, journals, and office supplies. We
+          are committed to literary exploration and helping our community
+          discover the joy of reading.
+        </p>
+      </section>
+
+      <section>
+        <h2>Business Hours</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Monday</th>
+              <td>9 AM – 8 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Tuesday</th>
+              <td>9 AM – 8 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Wednesday</th>
+              <td>9 AM – 8 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Thursday</th>
+              <td>9 AM – 8 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Friday</th>
+              <td>9 AM – 8 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Saturday</th>
+              <td>10 AM – 6 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Sunday</th>
+              <td>11 AM – 5 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Customer Feedback Form</h2>
+        <form onsubmit="submitMessage(event)">
+          <label for="feedback-name">Name*</label>
+          <input id="feedback-name" name="name" type="text" required />
+
+          <label for="feedback-email">Email*</label>
+          <input id="feedback-email" name="email" type="email" required />
+
+          <label for="feedback-message">Message*</label>
+          <textarea
+            id="feedback-message"
+            name="message"
+            rows="4"
+            required
+          ></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Custom Order Inquiry Form</h2>
+        <form onsubmit="submitMessage(event)">
+          <label for="custom-name">Name</label>
+          <input id="custom-name" name="custom-name" type="text" required />
+
+          <label for="custom-email">Email</label>
+          <input id="custom-email" name="custom-email" type="email" required />
+
+          <label for="custom-details">Details</label>
+          <textarea
+            id="custom-details"
+            name="details"
+            rows="4"
+            required
+          ></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <h2>Book Haven</h2>
+      <div class="footgrid">
+        <section>
+          <h3>Store Details</h3>
+          <p>Address</p>
+          <p>Contact</p>
+        </section>
+        <section>
+          <h3>Social Links</h3>
+          <a href="#">Instagram</a><a href="#">Twitter</a
+          ><a href="#">Facebook</a>
+        </section>
+        <section>
+          <h3>Navigation</h3>
+          <a href="index.html">Home</a><a href="gallery.html">Gallery</a
+          ><a href="about.html">About Us</a
+          ><a href="events.html">Community Events</a>
+        </section>
+        <section>
+          <h3>Visit</h3>
+          <a href="about.html">Info</a>
+        </section>
+        <section>
+          <h3>Newsletter</h3>
+          <p>
+            Enter your email to receive updates, promotions, and event
+            invitations.
+          </p>
+          <form onsubmit="subscribe(event)">
+            <label for="about-email">Email address</label
+            ><input id="about-email" type="email" required /><button
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </form>
+        </section>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
