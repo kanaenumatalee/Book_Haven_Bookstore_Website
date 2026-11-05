@@ -6,620 +6,686 @@
    Typography Option 1
    ============================================ */
 
-   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Comfortaa&display=swap");
 
-   :root {
-     --midnight: #2e2e4e;
-     --quill: #5c2e5c;
-     --blue: #3f5461;
-     --green: #3e5641;
-     --red: #742c36;
-     --text: #131c26;
-     --bg: #ffffff;
-     --bg-soft: #f4f4f7;
-     --white: #ffffff;
-   }
-   
-   /* ---------- Base ---------- */
-   * {
-     box-sizing: border-box;
-   }
-   
-   body {
-     margin: 0;
-     font-family: Calibri, Arial, sans-serif; /* Body 16px Calibri */
-     font-size: 16px;
-     line-height: 1.5;
-     color: var(--text);
-     background-color: var(--bg);
-   }
-   
-   main {
-     max-width: 1200px;
-     margin: 0 auto;
-     padding: 24px 20px;
-   }
-   
-   section {
-     margin-bottom: 40px;
-   }
-   
-   img {
-     max-width: 100%;
-     height: auto;
-     display: block;
-   }
-   
-   /* ---------- Typography ---------- */
-   h1 {
-     /* Display 40px Trebuchet MS Bold */
-     font-family: "Trebuchet MS", Arial, sans-serif;
-     font-size: 40px;
-     font-weight: bold;
-     color: var(--midnight);
-     margin: 0 0 12px;
-   }
-   
-   h2 {
-     /* Title Large 30px Times New Roman Bold */
-     font-family: "Times New Roman", Times, serif;
-     font-size: 30px;
-     font-weight: bold;
-     color: var(--midnight);
-     margin: 0 0 12px;
-   }
-   
-   h3 {
-     /* Title 25px Impact Bold */
-     font-family: Impact, "Arial Black", sans-serif;
-     font-size: 25px;
-     font-weight: bold;
-     color: var(--text);
-     margin: 12px 0 8px;
-   }
-   
-   h1 + p,
-   h2 + p {
-     /* Subtitle 15px Comic Sans MS Normal */
-     font-family: "Comic Sans MS", "Comic Sans", cursive;
-     font-size: 15px;
-     font-weight: normal;
-   }
-   
-   strong,
-   label,
-   nav a,
-   button {
-     /* Body Strong 16px Roboto Bold */
-     font-family: Roboto, Arial, sans-serif;
-     font-size: 16px;
-     font-weight: bold;
-   }
-   
-   .gallery-toolbar p,
-   .shopping-cart > p {
-     /* Captions 11px Comfortaa Normal */
-     font-family: Comfortaa, Arial, sans-serif;
-     font-size: 11px;
-     font-weight: normal;
-   }
-   
-   /* ---------- Links ---------- */
-   a {
-     color: var(--quill);
-     text-decoration: underline;
-   }
-   
-   a:hover {
-     color: var(--red);
-   }
-   
-   a:focus-visible,
-   button:focus-visible,
-   input:focus-visible,
-   textarea:focus-visible {
-     outline: 3px solid var(--red);
-     outline-offset: 2px;
-   }
-   
-   /* ---------- Header and navigation ---------- */
-   header {
-     background-color: var(--midnight);
-     color: var(--white);
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     flex-wrap: wrap;
-     gap: 16px;
-     padding: 16px 24px;
-   }
-   
-   .site-brand a {
-     display: flex;
-     align-items: center;
-     gap: 12px;
-     text-decoration: none;
-   }
-   
-   .logo {
-     font-family: "Trebuchet MS", Arial, sans-serif;
-     font-size: 30px;
-     font-weight: bold;
-     color: var(--white);
-   }
-   
-   .site-brand img {
-     background-color: var(--white);
-     border-radius: 8px;
-     padding: 4px;
-   }
-   
-   nav {
-     display: flex;
-     flex-wrap: wrap;
-     gap: 8px;
-   }
-   
-   nav a {
-     color: var(--white);
-     text-decoration: none;
-     padding: 8px 14px;
-     border-radius: 6px;
-   }
-   
-   nav a:hover,
-   nav a:focus-visible {
-     background-color: var(--quill);
-     color: var(--white);
-   }
-   
-   /* ---------- Buttons ---------- */
-   button {
-     background-color: var(--quill);
-     color: var(--white);
-     border: none;
-     border-radius: 6px;
-     padding: 10px 18px;
-     cursor: pointer;
-     margin-top: 8px;
-   }
-   
-   button:hover {
-     background-color: var(--red);
-   }
-   
-   /* ---------- Grids (home page) ---------- */
-   .product-grid {
-     display: grid;
-     grid-template-columns: repeat(4, 1fr);
-     gap: 24px;
-   }
-   
-   /* Featured Products has six items, so keep it at three columns */
-   .product-grid.featured {
-     grid-template-columns: repeat(3, 1fr);
-   }
-   
-   .product-grid article {
-     background-color: var(--bg-soft);
-     border: 1px solid #d5d5de;
-     border-radius: 8px;
-     padding: 16px;
-     text-align: center;
-   }
-   
-   .product-grid article img {
-     width: 100%;
-     height: 180px;
-     object-fit: cover;
-     margin: 0 auto 8px;
-   }
-   
-   /* ---------- Hero and About images ---------- */
-   .home-img {
-     width: 100%;
-     max-width: 400px;
-     height: auto;
-     border-radius: 8px;
-   }
-   
-   .about-img {
-     width: 100%;
-     max-width: 800px;
-     height: 400px;
-     object-fit: cover;
-     border-radius: 8px;
-   }
-   
-   /* ---------- Gallery page ---------- */
-   .gallery-toolbar {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     background-color: var(--bg-soft);
-     border-left: 6px solid var(--green);
-     padding: 8px 16px;
-   }
-   
-   .gallery-toolbar p {
-     margin: 0;
-   }
-   
-   .product-table {
-     width: 100%;
-     border-collapse: separate;
-     border-spacing: 16px;
-   }
-   
-   .product-table td {
-     width: 33.33%;
-     vertical-align: top;
-     text-align: center;
-     background-color: var(--bg-soft);
-     border: 1px solid #d5d5de;
-     border-radius: 8px;
-     padding: 16px;
-   }
-   
-   .product-table td img {
-     margin: 0 auto 8px;
-   }
-   
-   .product-table h2 {
-     font-family: Impact, "Arial Black", sans-serif;
-     font-size: 25px;
-     color: var(--text);
-   }
-   
-   .shopping-cart {
-     background-color: var(--bg-soft);
-     border-top: 6px solid var(--blue);
-     border-radius: 8px;
-     padding: 20px;
-   }
-   
-   .shopping-cart > div {
-     display: flex;
-     align-items: center;
-     gap: 16px;
-     border-bottom: 1px solid #d5d5de;
-     padding: 12px 0;
-   }
-   
-   .shopping-cart > div h3 {
-     margin: 0;
-   }
-   
-   /* ---------- Tables (business hours) ---------- */
-   table {
-     border-collapse: collapse;
-   }
-   
-   table th,
-   table td {
-     padding: 8px 16px;
-     text-align: left;
-   }
-   
-   section > table:not(.product-table) {
-     border: 1px solid #d5d5de;
-   }
-   
-   section > table:not(.product-table) thead th {
-     background-color: var(--blue);
-     color: var(--white);
-   }
-   
-   section > table:not(.product-table) tbody tr:nth-child(even) {
-     background-color: var(--bg-soft);
-   }
-   
-   /* ---------- Forms ---------- */
-   form {
-     display: flex;
-     flex-direction: column;
-     gap: 8px;
-     max-width: 500px;
-   }
-   
-   input,
-   textarea {
-     font-family: Calibri, Arial, sans-serif;
-     font-size: 16px;
-     color: var(--text);
-     background-color: var(--white);
-     border: 2px solid var(--blue);
-     border-radius: 6px;
-     padding: 8px;
-     width: 100%;
-   }
-   
-   /* ---------- Events page ---------- */
-   .event-list {
-     display: flex;
-     flex-direction: column;
-     gap: 24px;
-   }
-   
-   .event-list article {
-     display: flex;
-     align-items: center;
-     gap: 20px;
-     background-color: var(--bg-soft);
-     border: 1px solid #d5d5de;
-     border-radius: 8px;
-     padding: 16px;
-   }
-   
-   .event-list article img {
-     flex-shrink: 0;
-   }
-   
-   /* ---------- Footer ---------- */
-   footer {
-     background-color: var(--midnight);
-     color: var(--white);
-     padding: 32px 24px;
-   }
-   
-   footer h2,
-   footer h3 {
-     color: var(--white);
-   }
-   
-   .footgrid {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-     gap: 24px;
-   }
-   
-   .footgrid section {
-     margin-bottom: 0;
-   }
-   
-   footer a {
-     display: block;
-     color: var(--white);
-     margin-bottom: 6px;
-   }
-   
-   footer a:hover {
-     color: #e6c8e6;
-   }
-   
-   footer form {
-     max-width: 100%;
-   }
-   
-   footer label {
-     color: var(--white);
-   }
-   
-   /* ---------- Responsive (tablet) ---------- */
-   @media (max-width: 1000px) {
-     .product-grid,
-     .product-grid.featured {
-       grid-template-columns: repeat(2, 1fr);
-     }
-   }
-   
-   /* ---------- Responsive (mobile, follows mobile wireframe) ---------- */
-   @media (max-width: 768px) {
-     main {
-       padding: 16px;
-     }
-   
-     h1 {
-       font-size: 26px;
-     }
-   
-     h2 {
-       font-size: 24px;
-     }
-   
-     h3 {
-       font-size: 20px;
-     }
-   
-     /* Header: logo on top, nav in one row below */
-     header {
-       flex-direction: column;
-       align-items: stretch;
-       gap: 12px;
-       padding: 12px 16px;
-     }
-   
-     .site-brand a {
-       justify-content: center;
-     }
-   
-     nav {
-       display: grid;
-       grid-template-columns: repeat(4, auto);
-       justify-content: center;
-       gap: 14px;
-       width: 100%;
-     }
-   
-     nav a {
-       padding: 6px 2px;
-       font-size: 13px;
-       text-align: center;
-       white-space: nowrap;
-     }
-   
-     /* Hero and about images: short banner on phones */
-     .home-img,
-     .about-img {
-       width: 100%;
-       max-width: 100%;
-       height: 300px;
-       object-fit: cover;
-       object-position: center 40%;
-     }
-   
-     /* Featured Products: two cards per row */
-     .product-grid.featured {
-       grid-template-columns: repeat(2, 1fr);
-       gap: 12px;
-     }
-   
-     .product-grid.featured article {
-       padding: 10px;
-     }
-   
-     .product-grid article img {
-       height: 140px;
-     }
-   
-     /* Categories, Benefits, Promotions: stacked list rows */
-     .product-grid:not(.featured) {
-       grid-template-columns: 1fr;
-       gap: 12px;
-     }
-   
-     .product-grid:not(.featured) article {
-       display: grid;
-       grid-template-columns: 90px 1fr;
-       column-gap: 16px;
-       align-items: start;
-       text-align: left;
-       padding: 12px;
-     }
-   
-     .product-grid:not(.featured) article img {
-       grid-row: 1 / span 4;
-       width: 90px;
-       height: 90px;
-       margin: 0;
-     }
-   
-     .product-grid:not(.featured) article h3 {
-       margin: 0 0 4px;
-     }
-   
-     .product-grid:not(.featured) article p {
-       margin: 0 0 4px;
-     }
-   
-     /* Gallery: two product cards per row */
-     .product-table {
-       display: block;
-       width: 100%;
-       border-spacing: 0;
-     }
-   
-     .product-table tbody {
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-       gap: 12px;
-     }
-   
-     .product-table tr {
-       display: contents;
-     }
-   
-     .product-table td {
-       display: block;
-       width: 100%;
-       margin: 0;
-       padding: 10px;
-     }
-   
-     .product-table td img {
-       width: 100%;
-       height: auto;
-     }
-   
-     .product-table h2 {
-       font-size: 18px;
-     }
-   
-     .gallery-toolbar {
-       flex-direction: column;
-       align-items: stretch;
-       gap: 8px;
-     }
-   
-     .gallery-toolbar a {
-       border: 1px solid var(--text);
-       padding: 8px;
-       text-align: center;
-       text-decoration: none;
-       font-weight: bold;
-     }
-   
-     /* Shopping cart: image on the left, text stacked on the right */
-     .shopping-cart > div {
-       display: grid;
-       grid-template-columns: 60px 1fr;
-       column-gap: 12px;
-       align-items: start;
-       padding: 12px 0;
-     }
-   
-     .shopping-cart > div img {
-       grid-row: 1 / span 3;
-       width: 60px;
-       height: auto;
-     }
-   
-     .shopping-cart > div h3 {
-       font-size: 16px;
-       line-height: 1.3;
-       margin: 0 0 4px;
-     }
-   
-     .shopping-cart > div p {
-       font-size: 14px;
-       margin: 0 0 4px;
-     }
-   
-     .shopping-cart button {
-       width: 100%;
-     }
-   
-     /* Events: image on top, text and button below */
-     .event-list article {
-       flex-direction: column;
-       align-items: stretch;
-       text-align: left;
-       padding: 0;
-       overflow: hidden;
-     }
-   
-     .event-list article img {
-       width: 100%;
-       height: 180px;
-       object-fit: cover;
-       border-radius: 0;
-     }
-   
-     .event-list article > div {
-       padding: 0 16px 16px;
-     }
-   
-     /* Forms and tables use the full width */
-     form {
-       max-width: 100%;
-     }
-   
-     form button {
-       width: 100%;
-     }
-   
-     section > table:not(.product-table) {
-       width: 100%;
-     }
-   
-     /* Footer: one column, stacked */
-     .footgrid {
-       grid-template-columns: 1fr;
-       gap: 16px;
-     }
-   
-     footer a {
-       display: inline-block;
-       margin-right: 6px;
-     }
-   }
+:root {
+  --midnight: #2e2e4e;
+  --quill: #5c2e5c;
+  --blue: #3f5461;
+  --green: #3e5641;
+  --red: #742c36;
+  --text: #131c26;
+  --bg: #ffffff;
+  --bg-soft: #f4f4f7;
+  --white: #ffffff;
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Calibri, Arial, sans-serif;
+  /* Body 16px Calibri */
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Typography ---------- */
+h1 {
+  /* Display 40px Trebuchet MS Bold */
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--midnight);
+  margin: 0 0 12px;
+}
+
+h2 {
+  /* Title Large 30px Times New Roman Bold */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--midnight);
+  margin: 0 0 12px;
+}
+
+h3 {
+  /* Title 25px Impact Bold */
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--text);
+  margin: 12px 0 8px;
+}
+
+h1+p,
+h2+p {
+  /* Subtitle 15px Comic Sans MS Normal */
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+strong,
+label,
+nav a,
+button {
+  /* Body Strong 16px Roboto Bold */
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.gallery-toolbar p,
+.shopping-cart>p {
+  /* Captions 11px Comfortaa Normal */
+  font-family: Comfortaa, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: var(--quill);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--red);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 2px;
+}
+
+/* ---------- Header and navigation ---------- */
+header {
+  background-color: var(--midnight);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 24px;
+}
+
+.site-brand a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.site-brand img {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: var(--quill);
+  color: var(--white);
+}
+
+/* ---------- Buttons ---------- */
+button {
+  background-color: var(--quill);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background-color: var(--red);
+}
+
+/* ---------- Grids (home page) ---------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Featured Products has six items, so keep it at three columns */
+.product-grid.featured {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product-grid article {
+  background-color: var(--bg-soft);
+  border: 1px solid #d5d5de;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.product-grid article img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin: 0 auto 8px;
+}
+
+/* ---------- Hero and About images ---------- */
+.home-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ---------- Gallery page ---------- */
+.gallery-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-soft);
+  border-left: 6px solid var(--green);
+  padding: 8px 16px;
+}
+
+.gallery-toolbar p {
+  margin: 0;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 16px;
+}
+
+.product-table td {
+  width: 33.33%;
+  vertical-align: top;
+  text-align: center;
+  background-color: var(--bg-soft);
+  border: 1px solid #d5d5de;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.product-table td img {
+  margin: 0 auto 8px;
+}
+
+.product-table h2 {
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: 25px;
+  color: var(--text);
+}
+
+.shopping-cart {
+  background-color: var(--bg-soft);
+  border-top: 6px solid var(--blue);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.shopping-cart>div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid #d5d5de;
+  padding: 12px 0;
+}
+
+.shopping-cart>div h3 {
+  margin: 0;
+}
+
+/* ---------- Tables (business hours) ---------- */
+table {
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+section>table:not(.product-table) {
+  border: 1px solid #d5d5de;
+}
+
+section>table:not(.product-table) thead th {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+section>table:not(.product-table) tbody tr:nth-child(even) {
+  background-color: var(--bg-soft);
+}
+
+/* ---------- Forms ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 500px;
+}
+
+input,
+textarea {
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  background-color: var(--white);
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  padding: 8px;
+  width: 100%;
+}
+
+/* ---------- Events page ---------- */
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.event-list article {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--bg-soft);
+  border: 1px solid #d5d5de;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.event-list article img {
+  flex-shrink: 0;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--midnight);
+  color: var(--white);
+  padding: 32px 24px;
+}
+
+footer h2,
+footer h3 {
+  color: var(--white);
+}
+
+.footgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.footgrid section {
+  margin-bottom: 0;
+}
+
+footer a {
+  display: block;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+footer a:hover {
+  color: #e6c8e6;
+}
+
+footer form {
+  max-width: 100%;
+}
+
+footer label {
+  color: var(--white);
+}
+
+/* ---------- Responsive (tablet) ---------- */
+@media (max-width: 1000px) {
+
+  .product-grid,
+  .product-grid.featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Responsive (mobile, follows mobile wireframe) ---------- */
+@media (max-width: 768px) {
+  main {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  /* Header: logo on top, nav in one row below */
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .site-brand a {
+    justify-content: center;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 6px 2px;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* Hero and about images: short banner on phones */
+  .home-img,
+  .about-img {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  /* Featured Products: two cards per row */
+  .product-grid.featured {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .product-grid.featured article {
+    padding: 10px;
+  }
+
+  .product-grid article img {
+    height: 140px;
+  }
+
+  /* Categories, Benefits, Promotions: stacked list rows */
+  .product-grid:not(.featured) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .product-grid:not(.featured) article {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    column-gap: 16px;
+    align-items: start;
+    text-align: left;
+    padding: 12px;
+  }
+
+  .product-grid:not(.featured) article img {
+    grid-row: 1 / span 4;
+    width: 90px;
+    height: 90px;
+    margin: 0;
+  }
+
+  .product-grid:not(.featured) article h3 {
+    margin: 0 0 4px;
+  }
+
+  .product-grid:not(.featured) article p {
+    margin: 0 0 4px;
+  }
+
+  /* Gallery: two product cards per row */
+  .product-table {
+    display: block;
+    width: 100%;
+    border-spacing: 0;
+  }
+
+  .product-table tbody {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .product-table tr {
+    display: contents;
+  }
+
+  .product-table td {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .product-table td img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-table h2 {
+    font-size: 18px;
+  }
+
+  .gallery-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .gallery-toolbar a {
+    border: 1px solid var(--text);
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Shopping cart: image on the left, text stacked on the right */
+  .shopping-cart>div {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: 12px;
+    align-items: start;
+    padding: 12px 0;
+  }
+
+  .shopping-cart>div img {
+    grid-row: 1 / span 3;
+    width: 60px;
+    height: auto;
+  }
+
+  .shopping-cart>div h3 {
+    font-size: 16px;
+    line-height: 1.3;
+    margin: 0 0 4px;
+  }
+
+  .shopping-cart>div p {
+    font-size: 14px;
+    margin: 0 0 4px;
+  }
+
+  .shopping-cart button {
+    width: 100%;
+  }
+
+  /* Events: image on top, text and button below */
+  .event-list article {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .event-list article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .event-list article>div {
+    padding: 0 16px 16px;
+  }
+
+  /* Forms and tables use the full width */
+  form {
+    max-width: 100%;
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  section>table:not(.product-table) {
+    width: 100%;
+  }
+
+  /* Footer: one column, stacked */
+  .footgrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  footer a {
+    display: inline-block;
+    margin-right: 6px;
+  }
+}
+
+/* ---------- Shopping cart modal ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(19, 28, 38, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 100;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--white);
+  border-top: 6px solid var(--blue);
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  margin: 0;
+  padding: 2px 12px;
+  font-size: 24px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid #d5d5de;
+  padding: 12px 0;
+}
+
+.cart-item img {
+  width: 70px;
+  height: auto;
+}
+
+.cart-item h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+#cart-total {
+  font-weight: bold;
+  margin: 12px 0 4px;
+}

@@ -35,7 +35,7 @@
 
     <section class="gallery-toolbar">
       <p>9 products</p>
-      <a href="#shopping-cart">View Shopping Cart</a>
+<a href="#" onclick="viewCart(event)">View Shopping Cart</a>
     </section>
 
     <section>
@@ -51,7 +51,7 @@
               <p>Author: Marguerite Fontaine</p>
               <p>Description: A book for cheese lovers.</p>
               <p><strong>$16.99</strong></p>
-              <button type="button" onclick="addToCart()">Add to Cart</button>
+              <button type="button" onclick="addToCart(this)">Add to Cart</button>
             </td>
             <td>
               <img
@@ -62,7 +62,7 @@
               <p>Author: Dale Throttleman</p>
               <p>Description: A book about bikers.</p>
               <p><strong>$18.99</strong></p>
-              <button type="button" onclick="addToCart()">Add to Cart</button>
+              <button type="button" onclick="addToCart(this)">Add to Cart</button>
             </td>
             <td>
               <img
@@ -73,7 +73,7 @@
               <p>Author: Elowen Ashgrove</p>
               <p>Description: A fantasy book.</p>
               <p><strong>$21.99</strong></p>
-              <button type="button" onclick="addToCart()">Add to Cart</button>
+              <button type="button" onclick="addToCart(this)">Add to Cart</button>
             </td>
           </tr>
 
@@ -87,7 +87,7 @@
               <p>Author: Pickle Press Editors</p>
               <p>Description: A magazine about pickleball.</p>
               <p><strong>$7.99</strong></p>
-              <button type="button" onclick="addToCart()">Add to Cart</button>
+              <button type="button" onclick="addToCart(this)">Add to Cart</button>
             </td>
             <td>
               <img
@@ -98,7 +98,7 @@
               <p>Author: Wanderly Media Staff</p>
               <p>Description: A magazine for travelers.</p>
               <p><strong>$8.99</strong></p>
-              <button type="button" onclick="addToCart()">Add to Cart</button>
+              <button type="button" onclick="addToCart(this)">Add to Cart</button>
             </td>
             <td>
               <img
@@ -109,7 +109,7 @@
               <p>Author: Table &amp; Fork Editors</p>
               <p>Description: A magazine for foodies.</p>
               <p><strong>$8.99</strong></p>
-              <button type="button" onclick="addToCart()">Add to Cart</button>
+              <button type="button" onclick="addToCart(this)">Add to Cart</button>
             </td>
           </tr>
 
@@ -122,7 +122,7 @@
               <h2>ALL I DO IS READ READ READ Tote Bag</h2>
               <p>Description: A canvas tote bag with reading-themed lettering.</p>
               <p><strong>$24.00</strong></p>
-              <button type="button" onclick="addToCart()">Add to Cart</button>
+              <button type="button" onclick="addToCart(this)">Add to Cart</button>
             </td>
             <td>
               <img
@@ -132,7 +132,7 @@
               <h2>Book Haven Bookstore Notebook</h2>
               <p>Description: A notebook with Book Haven Bookstore on the cover.</p>
               <p><strong>$12.50</strong></p>
-              <button type="button" onclick="addToCart()">Add to Cart</button>
+              <button type="button" onclick="addToCart(this)">Add to Cart</button>
             </td>
             <td>
               <img
@@ -141,38 +141,24 @@
               <h2>Book Haven Bookstore Stickers</h2>
               <p>Description: A set of four stickers that promote reading.</p>
               <p><strong>$6.00</strong></p>
-              <button type="button" onclick="addToCart()">Add to Cart</button>
+              <button type="button" onclick="addToCart(this)">Add to Cart</button>
             </td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <section id="shopping-cart" class="shopping-cart">
-      <h2>Shopping Cart</h2>
-      <p>2 items</p>
-
-      <div>
-        <img
-          src="https://raw.githubusercontent.com/kanaenumatalee/Book_Haven_Bookstore_Website/main/Client3_ToteBag.png"
-          alt="Canvas tote bag with black lettering" width="100" />
-        <h3>ALL I DO IS READ READ READ Tote Bag</h3>
-        <p>Description: A canvas tote bag with reading-themed lettering.</p>
-        <p>$24.00</p>
+    <div id="cart-modal" class="modal" hidden>
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <button type="button" class="modal-close" onclick="closeCart()" aria-label="Close cart">&times;</button>
+        <h2 id="cart-title">Shopping Cart</h2>
+        <p id="cart-count">0 items</p>
+        <div id="cart-items"></div>
+        <p id="cart-total"></p>
+        <button type="button" onclick="clearCart()">Clear Cart</button>
+        <button type="button" onclick="processOrder()">Process Order</button>
       </div>
-
-      <div>
-        <img
-          src="https://raw.githubusercontent.com/kanaenumatalee/Book_Haven_Bookstore_Website/main/Client3_Notebook.png"
-          alt="Book Haven Bookstore notebook" width="100" />
-        <h3>Book Haven Bookstore Notebook</h3>
-        <p>Description: A notebook with Book Haven Bookstore on the cover.</p>
-        <p>$12.50</p>
-      </div>
-
-      <button type="button" onclick="clearCart()">Clear Cart</button>
-      <button type="button" onclick="processOrder()">Process Order</button>
-    </section>
+    </div>
   </main>
 
   <footer>
